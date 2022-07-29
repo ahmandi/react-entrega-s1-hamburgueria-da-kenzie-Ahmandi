@@ -40,6 +40,10 @@ function App() {
 		setCurrentSale(ProductFilter);
 	}
 
+	function handleRemoveAll() {
+		setCurrentSale([]);
+	}
+
 	return (
 		<div className="App">
 			<Header showProducts={showProducts} />
@@ -49,7 +53,11 @@ function App() {
 					handleClick={handleClick}
 					filteredProducts={filteredProducts}
 				/>
-				<Cart currentSale={currentSale} handleRemoval={handleRemoval} />
+				<Cart
+					currentSale={currentSale}
+					handleRemoval={handleRemoval}
+					handleRemoveAll={handleRemoveAll}
+				/>
 			</div>
 		</div>
 	);

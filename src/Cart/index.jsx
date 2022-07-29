@@ -11,7 +11,7 @@ import {
 	Button,
 } from './styles';
 
-function Cart({ currentSale, handleRemoval }) {
+function Cart({ currentSale, handleRemoval, handleRemoveAll }) {
 	const addTotal = currentSale.reduce((valorAnterior, valorAtual) => {
 		return valorAnterior + valorAtual.price;
 	}, 0);
@@ -47,7 +47,9 @@ function Cart({ currentSale, handleRemoval }) {
 									<p>Total</p>
 									<p>R$ {addTotal.toFixed(2)}</p>
 								</Total>
-								<Button>Remover Todos</Button>
+								<Button onClick={() => handleRemoveAll(currentSale)}>
+									Remover Todos
+								</Button>
 							</>
 						)}
 					</ul>
