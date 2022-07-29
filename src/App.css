@@ -1,0 +1,16 @@
+.test {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+	.test {
+		display: flex;
+		flex-direction: row;
+		padding: 0.625rem 2.5rem 0.625rem 10%;
+		align-items: unset;
+	}
+}
