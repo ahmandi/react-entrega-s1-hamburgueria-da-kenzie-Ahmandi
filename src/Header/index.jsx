@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Logo from '../svg/logo.svg';
-import { Container, SearchContainer, Img, Input, Button } from './styles';
+import { Container, SearchContainer, Img, Input, Form, Button } from './styles';
 
 function Header({ showProducts }) {
 	const [filter, setFilter] = useState('');
@@ -8,7 +8,7 @@ function Header({ showProducts }) {
 	return (
 		<Container>
 			<Img src={Logo} alt="Logo" />
-			<form>
+			<Form>
 				<SearchContainer>
 					<Input
 						onChange={(e) => setFilter(e.target.value)}
@@ -25,7 +25,7 @@ function Header({ showProducts }) {
 						Pesquisar
 					</Button>
 				</SearchContainer>
-			</form>
+			</Form>
 		</Container>
 	);
 }

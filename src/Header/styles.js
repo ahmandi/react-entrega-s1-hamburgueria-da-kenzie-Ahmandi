@@ -79,3 +79,8 @@ export const Button = styled.button`
 		transform: translateY(0.08rem);
 	}
 `;
+
+export const Form = styled.form`
+	width: inherit;
+	flex-basis: content;
+`;

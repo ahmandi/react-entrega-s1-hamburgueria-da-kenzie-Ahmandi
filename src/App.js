@@ -4,6 +4,8 @@ import ProductsList from './ProductsList';
 import Cart from './Cart';
 import './App.css';
 import Header from './Header';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const [products, setProducts] = useState([]);
@@ -28,8 +30,17 @@ function App() {
 
 	function handleClick(productId) {
 		const productFind = products.find((product) => product.id === productId);
+
 		if (currentSale.includes(productFind)) {
-			alert('Produto já está no carrinho');
+			toast.error('O produto já está no carrinho!', {
+				position: 'top-right',
+				autoClose: 3000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
 		} else {
 			setCurrentSale([...currentSale, productFind]);
 		}
@@ -58,6 +69,7 @@ function App() {
 					handleRemoval={handleRemoval}
 					handleRemoveAll={handleRemoveAll}
 				/>
+				<ToastContainer />
 			</div>
 		</div>
 	);
