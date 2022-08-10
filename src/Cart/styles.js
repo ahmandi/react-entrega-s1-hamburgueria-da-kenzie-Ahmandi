@@ -188,6 +188,9 @@ export const ItemName = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+    width: min-content;
+    text-align: initial;
+}
 
 	gap: 0.7rem;
 
