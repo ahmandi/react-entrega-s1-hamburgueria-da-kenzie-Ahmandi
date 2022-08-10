@@ -12,6 +12,7 @@ export const Checkout = styled.div`
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
+
 	::-webkit-scrollbar {
 		width: 10px;
 	}
@@ -27,16 +28,16 @@ export const Checkout = styled.div`
 		background: #828282;
 	}
 
-	width: 100%;
+	width: 16.8rem;
 	min-height: 5rem;
 	max-height: 29.375rem;
+	padding: 1rem;
 
 	background-color: rgba(245, 245, 245, 1);
 
 	border: none;
 	border-radius: 0px 0px 5px 5px;
 
-	padding: 1.153rem;
 	margin: 0 0 1rem 0;
 
 	p {
@@ -69,7 +70,7 @@ export const Title = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	width: 100%;
+	width: 16.5rem;
 
 	font-weight: 700;
 	font-size: 18px;
@@ -146,7 +147,7 @@ export const Product = styled.li`
 
 	gap: 1rem;
 
-	margin: 0.5rem;
+	margin: 0.5rem 0;
 
 	button {
 		border: none;
@@ -168,6 +169,7 @@ export const SmContainer = styled.div`
 `;
 
 export const ImgContainer = styled.div`
+	min-width: 5.5rem;
 	width: 5.5rem;
 	height: 5.5rem;
 
@@ -180,7 +182,7 @@ export const ImgContainer = styled.div`
 `;
 
 export const Img = styled.img`
-	width: 4.375rem;
+	min-width: 4.375rem;
 	height: 4.375rem;
 `;
 
@@ -188,9 +190,8 @@ export const ItemName = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-    width: min-content;
-    text-align: initial;
-}
+	width: min-content;
+	min-width: 10rem;
 
 	gap: 0.7rem;
 
@@ -199,6 +200,7 @@ export const ItemName = styled.div`
 		font-size: 14px;
 		line-height: 24px;
 		color: #333333;
+		text-align: initial;
 	}
 
 	p + p {
@@ -206,5 +208,6 @@ export const ItemName = styled.div`
 		font-size: 12px;
 		line-height: 16px;
 		color: #828282;
+		text-align: initial;
 	}
 `;
